@@ -1,4 +1,4 @@
-namespace Models.Entities;
+namespace TodoList.Models.Entities;
 
 public sealed class Comment
 {

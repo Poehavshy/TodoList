@@ -22,7 +22,7 @@ namespace TodoList.DatabaseManager.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Models.Entities.Comment", b =>
+            modelBuilder.Entity("TodoList.Models.Entities.Comment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -69,7 +69,7 @@ namespace TodoList.DatabaseManager.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Models.Entities.Todo", b =>
+            modelBuilder.Entity("TodoList.Models.Entities.Todo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -133,9 +133,9 @@ namespace TodoList.DatabaseManager.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Models.Entities.Comment", b =>
+            modelBuilder.Entity("TodoList.Models.Entities.Comment", b =>
                 {
-                    b.HasOne("Models.Entities.Todo", null)
+                    b.HasOne("TodoList.Models.Entities.Todo", null)
                         .WithMany("Comments")
                         .HasForeignKey("TodoId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -143,7 +143,7 @@ namespace TodoList.DatabaseManager.Migrations
                         .HasConstraintName("fk_comments_todos_todo_id");
                 });
 
-            modelBuilder.Entity("Models.Entities.Todo", b =>
+            modelBuilder.Entity("TodoList.Models.Entities.Todo", b =>
                 {
                     b.Navigation("Comments");
                 });

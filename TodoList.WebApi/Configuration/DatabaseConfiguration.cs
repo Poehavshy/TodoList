@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TodoList.DatabaseManager.Interfaces;
 using TodoList.DatabaseManager.Managers.Postgresql;
 
 namespace TodoList.WebApi.Configuration;
@@ -10,5 +11,6 @@ public static class DatabaseConfiguration
         services.AddDbContext<Context>(options =>
             options.UseNpgsql(configuration.GetConnectionString("TodoListDatabase"))
                 .UseSnakeCaseNamingConvention());
+        services.AddScoped<IDatabaseManager, Manager>();
     }
 }

@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Models.Entities;
-using Models.Enums;
+using TodoList.Models.Entities;
+using TodoList.Models.Enums;
 
 namespace TodoList.DatabaseManager.Managers.Postgresql;
 
@@ -17,6 +17,7 @@ public sealed class Context : DbContext
         modelBuilder.Entity<Todo>().Property(t => t.Category).HasConversion<string>();
         modelBuilder.Entity<Todo>().Property(t => t.Color).HasConversion<string>();
         modelBuilder.Entity<Todo>().Property(t => t.Created).HasDefaultValueSql("now()");
+        modelBuilder.Entity<Todo>().Ignore(t => t.Hash);
 
         Todo todo1 = new()
         {

@@ -2,11 +2,11 @@ using TodoList.WebApi.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.ConfigureDatabaseContext(builder.Configuration);
+builder.ConfigureLogger();
 
 var app = builder.Build();
 

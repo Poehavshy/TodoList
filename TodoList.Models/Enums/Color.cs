@@ -1,4 +1,4 @@
-namespace Models.Enums;
+namespace TodoList.Models.Enums;
 
 public enum Color
 {

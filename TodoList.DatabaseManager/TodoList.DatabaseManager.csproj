@@ -18,7 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Models\Models.csproj" />
+      <ProjectReference Include="..\TodoList.Models\TodoList.Models.csproj" />
     </ItemGroup>
 
 </Project>

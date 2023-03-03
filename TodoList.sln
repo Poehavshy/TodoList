@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.WebApi", "TodoList
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.DatabaseManager", "TodoList.DatabaseManager\TodoList.DatabaseManager.csproj", "{0EB648DB-DCBE-431A-B8B7-FE14CEA4F8B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{B9051C69-6D97-4AB3-8D4B-D6C478458F5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoList.Models", "TodoList.Models\TodoList.Models.csproj", "{B9051C69-6D97-4AB3-8D4B-D6C478458F5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
