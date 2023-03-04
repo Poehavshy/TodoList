@@ -16,5 +16,7 @@ public interface IDatabaseManager : IDisposable
 
     Task UpdateTodo(Todo todo);
     
+    Task AddComment(Comment comment);
+    
     Task SaveChanges();
 }

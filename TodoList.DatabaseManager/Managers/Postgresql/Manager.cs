@@ -55,6 +55,11 @@ public class Manager : IDatabaseManager
                 .SetProperty(p => p.Color, todo.Color));
     }
 
+    public async Task AddComment(Comment comment)
+    {
+        await _context.Comments.AddAsync(comment);
+    }
+
     public async Task SaveChanges()
     {
         await _context.SaveChangesAsync();
